@@ -45,4 +45,5 @@ def answer_question(paragraph, question):
     return response["asnwers"]
 
 
-gr.Interface(fn=answer_question, inputs=["text"], outputs="text").launch()
+gr.Interface(fn=answer_question, inputs=[
+             "textbox", "text"], outputs="text").launch()
